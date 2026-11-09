@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiff Célice, Tech Recruiter</title>
+<meta name="description" content="Tiff Célice recruits engineers, designers, product managers and hiring teams. Lisbon, Portugal.">
+<meta property="og:title" content="Tiff Célice, Tech Recruiter">
+<meta property="og:description" content="I recruit people for tech, product and data teams, and for most other roles too.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --ink: #0f1a2b;
+  --muted: #566176;
+  --line: #e3e7ee;
+  --accent: #1f4fe0;
+  --tint: #f3f6fe;
+  --font: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1320;
+    --ink: #eef1f6;
+    --muted: #9aa5b8;
+    --line: #243049;
+    --accent: #8aa9ff;
+    --tint: #131c2e;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ink);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.page { max-width: 64rem; margin: 0 auto; padding: 0 1rem; }
+
+/* Hero */
+.hero { padding: clamp(4rem, 12vw, 9rem) 0 clamp(3rem, 8vw, 6rem); }
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+.hero .lede {
+  margin: 2rem 0 0;
+  max-width: 36rem;
+  font-size: clamp(1.25rem, 2.6vw, 1.625rem);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.hero .where { margin: 1rem 0 0; color: var(--muted); max-width: 36rem; }
+
+/* Sections */
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2.5rem 0 3.5rem;
+  border-top: 1px solid var(--line);
+}
+section > h2 { margin: 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.6; }
+@media (min-width: 52rem) {
+  section { grid-template-columns: 11rem 1fr; gap: 2rem; }
+}
+.content { max-width: 40rem; }
+.wide { max-width: none; }
+
+/* Selected work: case studies */
+.case { padding: 0 0 3rem; margin: 0 0 3rem; border-bottom: 1px solid var(--line); }
+.case:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.case .where-when { margin: 0; color: var(--muted); }
+.case h3 {
+  margin: 0.25rem 0 0;
+  max-width: 34rem;
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.case .brief { margin: 1rem 0 0; max-width: 36rem; color: var(--muted); }
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1px;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.figures li { background: var(--tint); padding: 1.1rem 1rem 1.2rem; }
+.figures .n {
+  display: block;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.figures .l { display: block; margin-top: 0.5rem; font-size: 0.9375rem; line-height: 1.4; }
+
+table {
+  width: 100%;
+  margin: 1.75rem 0 0;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+caption { caption-side: top; text-align: left; padding-bottom: 0.5rem; color: var(--muted); }
+th, td { text-align: right; padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-weight: 600; border-bottom-color: var(--ink); }
+tbody th { font-weight: 500; }
+.table-wrap { overflow-x: auto; }
+
+/* Roles */
+.roles { margin: 0; padding: 0; list-style: none; }
+.roles li { padding: 0 0 1.75rem 1.5rem; position: relative; }
+.roles li:last-child { padding-bottom: 0; }
+.roles li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+.roles h3 { margin: 0; font-size: 1.0625rem; font-weight: 600; }
+.roles p { margin: 0.25rem 0 0; color: var(--muted); }
+
+/* Writing */
+.post { margin: 0 0 1.75rem; }
+.post:last-child { margin-bottom: 0; }
+.post h3 { margin: 0; font-size: 1.0625rem; font-weight: 600; }
+.post .meta { margin: 0.1rem 0 0; color: var(--muted); font-size: 0.9375rem; }
+.post p { margin: 0.25rem 0 0; }
+
+/* Career */
+.career { margin: 0; padding: 0; list-style: none; }
+.career li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.career .role { font-weight: 500; }
+.career .org { color: var(--muted); }
+.career .when { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.contact p { margin: 0 0 0.5rem; }
+footer { padding: 2rem 0 4rem; color: var(--muted); font-size: 0.9375rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="hero">
+    <h1>Tiff Célice</h1>
+    <p class="lede">I recruit people for tech, product and data teams, and for most other roles too.</p>
+    <p class="where">Based in Lisbon. 10+ years recruiting in-house, in agencies and on RPO projects, across Europe, the UK, the US and APAC.</p>
+  </header>
+
+  <section aria-labelledby="work">
+    <h2 id="work">Selected work</h2>
+    <div class="content wide">
+
+      <article class="case">
+        <p class="where-when">Too Good To Go, 2023 to 2025</p>
+        <h3>Recruiting across Tech, Product and Data in seven countries</h3>
+        <p class="brief">Partnered with hiring teams in Denmark, France, Spain, the Netherlands, the UK, the US and Japan, from interns to directors, across Engineering, ML and AI, Data, Product and Design.</p>
+        <ul class="figures">
+          <li><span class="n">154</span><span class="l">offers made in three years, 150 accepted</span></li>
+          <li><span class="n">100%</span><span class="l">offer acceptance in 2024, 65 offers out of 65</span></li>
+          <li><span class="n">35 days</span><span class="l">time to hire in 2024 and 2025, down from 42 in 2023</span></li>
+          <li><span class="n">+517%</span><span class="l">offers in 2023 versus the same period the year before</span></li>
+        </ul>
+        <div class="table-wrap">
+          <table>
+            <caption>Results by period</caption>
+            <thead>
+              <tr><th scope="col">Period</th><th scope="col">Offers</th><th scope="col">Accepted</th><th scope="col">Acceptance</th><th scope="col">Time to hire</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Apr to Dec 2023</th><td>37</td><td>36</td><td>97%</td><td>42 days</td></tr>
+              <tr><th scope="row">2024</th><td>65</td><td>65</td><td>100%</td><td>35 days</td></tr>
+              <tr><th scope="row">Jan to Nov 2025</th><td>52</td><td>49</td><td>94%</td><td>35 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="case">
+        <p class="where-when">Too Good To Go, 2023 to 2025</p>
+        <h3>Making the engineering team easier to find and easier to say yes to</h3>
+        <p class="brief">I launched the company's Medium engineering blog and wrote for it, so candidates could see how the team works before the first call. I also shared my sourcing approach with the wider talent team.</p>
+      </article>
+
+      <article class="case">
+        <p class="where-when">Deliveroo, 2022 to 2023</p>
+        <h3>Sourcing backend and mobile engineers when applications weren't enough</h3>
+        <p class="brief">Part of an eight-person tech sourcing team, recruiting for backend, mobile, SRE, Data and Security roles, and for the build-out of the Engineering Centre in India.</p>
+        <ul class="figures">
+          <li><span class="n">170%</span><span class="l">of offer target, pro rata</span></li>
+          <li><span class="n">14</span><span class="l">offers in five months</span></li>
+          <li><span class="n">80%</span><span class="l">diverse outreach</span></li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <p class="where-when">Deloitte Digital, 2021 to 2022</p>
+        <h3>Recruiting for about 70 open roles across consulting and engineering</h3>
+        <p class="brief">Design, Software Engineering, DevOps, Architecture, Data and Salesforce, built on passive talent pipelines and close work with recruiters and hiring managers.</p>
+      </article>
+
+      <article class="case">
+        <p class="where-when">M3S and Morgan McKinley, Singapore, 2016 to 2018</p>
+        <h3>First hire in a new RPO team, recruiting across nine APAC markets</h3>
+        <p class="brief">Singapore, Malaysia, the Philippines, Hong Kong, Korea, Thailand, Papua New Guinea, China and Taiwan, for Technology, Product, Sales, Marketing, Finance and Engineering roles.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="who">
+    <h2 id="who">Who I recruit</h2>
+    <div class="content">
+      <ul class="roles">
+        <li>
+          <h3>Engineers</h3>
+          <p>Frontend, fullstack, backend, mobile, data, ML and infrastructure. I've recruited engineers from intern to director level, and I've written about what makes an engineering CV stand out.</p>
+        </li>
+        <li>
+          <h3>Designers</h3>
+          <p>Product designers who can talk about data and impact. Tell me which metric you moved and what changed, not only what the screens looked like.</p>
+        </li>
+        <li>
+          <h3>Product managers</h3>
+          <p>Product managers and product leaders. Tell me which decisions you owned and what changed because of them.</p>
+        </li>
+        <li>
+          <h3>Hiring managers</h3>
+          <p>Building a team? I'll help you scope the role, reach people who aren't actively looking, and keep the process fast. My time to hire was 35 days in both 2024 and 2025.</p>
+        </li>
+        <li>
+          <h3>Everyone else</h3>
+          <p>Those are the roles I'm recruiting for right now. I've also recruited for Finance, Legal, Sales, Commercial, Analytics and more, so if there's a role, get in touch.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="writing">
+    <h2 id="writing">Writing</h2>
+    <div class="content">
+      <article class="post">
+        <h3><a href="https://engineering.toogoodtogo.com/how-to-create-a-standout-cv-as-a-software-engineer-0900fda98512">How to create a standout CV as a software engineer</a></h3>
+        <p class="meta"><time datetime="2025-04-11">April 11, 2025</time>, Too Good To Go engineering blog</p>
+        <p>Show how you solve problems and create value, not only which technologies you've used. Open with a focused summary, separate your own impact from the team's, and tailor your stack to the role.</p>
+      </article>
+      <article class="post">
+        <h3><a href="https://engineering.toogoodtogo.com/a-great-cv-for-analytics-is-more-than-a-list-of-tools-17b1e5355ff6">A great CV for analytics is more than a list of tools</a></h3>
+        <p class="meta">Too Good To Go engineering blog</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="career">
+    <h2 id="career">Career</h2>
+    <div class="content">
+      <ul class="career">
+        <li><span><span class="role">Recruiter</span>, <span class="org">Bounce</span></span><span class="when">Now</span></li>
+        <li><span><span class="role">Senior Global Talent Acquisition Partner</span>, <span class="org">Too Good To Go</span></span><span class="when">2023 to 2025</span></li>
+        <li><span><span class="role">Tech Sourcing Specialist</span>, <span class="org">Deliveroo</span></span><span class="when">2022 to 2023</span></li>
+        <li><span><span class="role">Tech Recruiter and Lead Sourcing Specialist</span>, <span class="org">Deloitte Digital</span></span><span class="when">2021 to 2022</span></li>
+        <li><span><span class="role">Tech Recruitment Specialist</span>, <span class="org">Believe Music</span></span><span class="when">2020 to 2021</span></li>
+        <li><span><span class="role">Tech Talent Delivery Consultant</span>, <span class="org">Bright Purple Resourcing</span></span><span class="when">2019 to 2020</span></li>
+        <li><span><span class="role">Audit and Treasury Recruitment Consultant</span>, <span class="org">Meraki Talent</span></span><span class="when">2018 to 2019</span></li>
+        <li><span><span class="role">Programme Delivery Consultant, APAC</span>, <span class="org">M3S and Morgan McKinley</span></span><span class="when">2016 to 2018</span></li>
+        <li><span><span class="role">Recruitment Consultant</span>, <span class="org">Morgan McKinley and Brunel International</span></span><span class="when">2015 to 2016</span></li>
+        <li><span><span class="role">Talent Acquisition: Android developers, then the internship programme</span>, <span class="org">Revolut</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="contact">
+    <h2 id="contact">Get in touch</h2>
+    <div class="content">
+      <p>The best way to reach me is on <a href="https://www.linkedin.com/in/tiffcelice">LinkedIn</a>.</p>
+      <p>I also keep a small profile on <a href="https://github.com/CosmicBoogie42">GitHub</a>.</p>
+    </div>
+  </section>
+
+</main>
+<footer>
+  <div class="page">Tiff Célice, Lisbon.</div>
+</footer>
+</body>
+</html>
